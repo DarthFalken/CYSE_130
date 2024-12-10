@@ -6,10 +6,14 @@ Logger 130 is a automated security system with the ability to analyze logs, netw
 
 
 HOW TO USE LOGGER_130
-download the python script. /n
-open in VS code or platform of your choice
-install any of the python libraries that you do not currently have
-run the script
+
+download the python script.
+
+open in VS code or platform of your choice.
+
+install any of the python libraries that you do not currently have.
+
+run the script.
 
 
 
@@ -22,6 +26,7 @@ The analyze_log function analyzes a vsftpd log file, either the default one in t
 as the script or a user-specified log file. It extracts various statistics such as the number of
 successful and failed logins, bytes uploaded and downloaded, directories created and deleted,
 and more. The results are printed to the console.
+
 Function Definition
 def analyze_log(filename: str=None):
 send_alert Function Documentation
@@ -29,6 +34,7 @@ Overview
 The send_alert function is responsible for sending alert emails with a specified subject and
 body. It creates an email message, configures the necessary headers, and sends the email
 using the SendGrid SMTP server over a secure connection.
+
 Function Definition
 def send_alert(subject, body):
 __convBytes Function Documentation
@@ -36,6 +42,7 @@ Overview
 The __convBytes function converts a given number of bytes into a more human-readable
 format, breaking it down into petabytes, terabytes, gigabytes, megabytes, kilobytes, and bytes.
 It can also format the output as a string with the largest applicable unit.
+
 Function Definition
 def __convBytes(bs: int, format: bool=False):
 analyze_system Function Documentation
@@ -43,15 +50,19 @@ Overview
 The analyze_system function monitors and logs various system statistics, including CPU usage,
 memory usage, storage usage, and network activity. It can print results to the terminal, save
 logs to a file, and send alert emails when certain thresholds are exceeded.
+
 Function Definition
 def analyze_system(CPU: bool=True, MEM: bool=True, STO: bool=True, NET: bool=True,
 intface: str="Wi-Fi", save: bool=False, pri: bool=True, interval: int=1, disk: str='/', emails:
 bool=True):
-settings Function Documentation
+settings
+
+Function Documentation
 Overview
 The settings function provides a user interface for modifying the default settings of the system
 monitoring tool. The settings that can be changed include the default network interface, the
 default disk for measuring usage, and the default email address for sending logs.
+
 
 Function Definition
 def settings():
@@ -67,6 +78,7 @@ Overview
 The loopNmap function continuously runs the nmap command with specified arguments and
 delays between each execution. This loop will continue indefinitely until a termination condition
 is met.
+
 Function Definition
 def loopNmap(args: str, delay: int, save, name):
 nmap Function Documentation
@@ -74,6 +86,7 @@ Overview
 The nmap function executes the nmap network scanning tool with specified arguments. It can
 prompt the user for input if no arguments are provided, and it can save the output to a file if
 specified.
+
 Function Definition
 def nmap(args: str=None, save: bool=False, name: str=None):
 security_check Function Documentation
@@ -83,6 +96,7 @@ security-related tasks, such as running an Nmap scan, analyzing network traffic,
 stopping automated scanning.
 Function Definition
 def security_check():
+
 __c Function Documentation
 Overview
 The __c function is a custom utility designed to clear the terminal output, providing a clean
@@ -90,6 +104,7 @@ workspace for the user. It adapts to the operating system being used and execute
 appropriate command to clear the terminal screen.
 Function Definition
 def __c():
+
 main Function Documentation
 Overview
 
