@@ -6,7 +6,7 @@ Logger 130 is a automated security system with the ability to analyze logs, netw
 
 
 HOW TO USE LOGGER_130
-download the python script
+download the python script. /n
 open in VS code or platform of your choice
 install any of the python libraries that you do not currently have
 run the script
